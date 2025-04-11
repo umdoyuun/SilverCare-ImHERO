@@ -8,27 +8,27 @@ Carebot Project는 독거노인을 위한 스마트 생활 도우미 서비스�
 
 ### 서비스 설계
 
-![서비스_아키텍처.drawio](/uploads/71ece4c155f019811abc16a1efbf0104/4차_서비스_아키텍처.drawio.png)
+![4차_서비스_아키텍처 drawio](https://github.com/user-attachments/assets/6ec914a6-91e3-49ae-8fac-563dcd21ff5e)
 
 ### 프로젝트 기여자
 
-<a href="https://github.com/ehgud937"><img src="/uploads/4a63b7699ec175cac0a615af677c207c/최종1.png" width="110" height="200" alt="Contributor 1"/></a>
-<a href="https://github.com/knowgyu"><img src="/uploads/3638726557747a533af920d9599f75a9/최종2.png" width="100" height="200" alt="Contributor 2"/></a>
-<a href="https://github.com/itdice"><img src="/uploads/2c0799da7c65c014e06c0c7a94d108c0/최종3.png" width="100" height="200" alt="Contributor 3"/></a>
-<a href="https://github.com/umdoyuun"><img src="/uploads/3379abd1745c37e08177db325f06db85/최종4.png" width="100" height="200" alt="Contributor 4"/></a>
-<a href="https://github.com/SJLee-0525"><img src="/uploads/ae6d83f15add3b4005f933f8aab2141f/최종5.png" width="100" height="200" alt="Contributor 5"/></a>
-<a href="https://github.com/Seohui-Hyung"><img src="/uploads/007742440f21fafb160cc2378852376d/최종6.png" width="110" height="200" alt="Contributor 6"/></a>
+<a href="https://github.com/ehgud937"><img src="![1](https://github.com/user-attachments/assets/b0da6784-5d88-496a-b1fe-5a630ba0b1c0)" width="110" height="200" alt="Contributor 1"/></a>
+<a href="https://github.com/knowgyu"><img src="![2](https://github.com/user-attachments/assets/9075832d-85f8-414a-af61-020bf08c6000)" width="100" height="200" alt="Contributor 2"/></a>
+<a href="https://github.com/itdice"><img src="![최종3](https://github.com/user-attachments/assets/32d2acb7-9dd9-408a-920f-c1f69495cae3)" width="100" height="200" alt="Contributor 3"/></a>
+<a href="https://github.com/umdoyuun"><img src="![최종4](https://github.com/user-attachments/assets/b1a63c82-2c23-4b9d-891a-e12ff0bc8a8f)" width="100" height="200" alt="Contributor 4"/></a>
+<a href="https://github.com/SJLee-0525"><img src="![최종5](https://github.com/user-attachments/assets/29d17d5c-850d-4f89-8018-a71a5c5f8184)" width="100" height="200" alt="Contributor 5"/></a>
+<a href="https://github.com/Seohui-Hyung"><img src="![최종6](https://github.com/user-attachments/assets/9132aea9-04ac-46f9-8d4a-a67e3f7285db)" width="110" height="200" alt="Contributor 6"/></a>
 
 ### 최종 산출물
 
 > **[독거노인 페이지]** <br/>
-> ![main-user-page](/uploads/2ccec764b2c872ee3be581fa660d2137/image.png)
+![image (1)](https://github.com/user-attachments/assets/c63e864b-19a4-4f92-8ca0-c57d1d932d86)
 
 > **[보호자 페이지]** <br/>
-> ![sub-user-page](https://raw.githubusercontent.com/SJLee-0525/imgSource/master/carbot_readme/home.png)
+![보호자](https://github.com/user-attachments/assets/85f4f065-f2c8-4738-a3c4-bd5b0af167f8)
 
 > **[AI 실버케어 로봇 영웅이]** <br/>
-> ![TalkMedia_i_088223da14d8.jpeg](/uploads/45b6a3b8ddcedc7399f3123e9b293215/TalkMedia_i_088223da14d8.jpeg.jpeg)
+![영웅이](https://github.com/user-attachments/assets/5da7a2fe-d1fc-4351-9ed1-e99d2366e536)
 
 ### 프로젝트 일정
 
