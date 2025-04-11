@@ -1,5 +1,5 @@
 ## Carebot Project - AI 실버케어 로봇 플랫폼 "영웅이"
-https://www.youtube.com/watch?v=LQlEIiO-5KE
+![image](https://github.com/user-attachments/assets/05f1fb4a-0bfc-4571-936a-fd9d0d9b80e2)
 
 ### 개요
 
