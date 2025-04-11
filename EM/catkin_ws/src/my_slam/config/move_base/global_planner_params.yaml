@@ -1,0 +1,15 @@
+global_planner:
+  allow_unknown: true         # 기본값: true | 미지의 공간 허용 여부
+  default_tolerance: 0.0        # 기본값: 0.0 | 목표 지점 근접 허용 오차 (m)
+  visualize_potential: false    # 기본값: false | 잠재력(cost) 지도 시각화 여부
+  use_dijkstra: true            # 기본값: true | true이면 Dijkstra를, false이면 A* 사용
+  use_quadratic: true           # 기본값: true | 이차 근사법을 사용하여 잠재력 계산
+  use_grid_path: true          # 기본값: false | true이면 그리드 경계에 맞춘 경로 생성
+  old_navfn_behavior: false     # 기본값: false | 기존 navfn과 동일한 경로 생성 여부
+  lethal_cost: 253              # 기본값: 253 | 치명적 장애물로 간주할 비용 값
+  neutral_cost: 40              # 기본값: 50  | 기본 중립 비용 값
+  cost_factor: 5.0              # 기본값: 3.0 | costmap 비용에 곱해지는 계수
+  publish_potential: true       # 기본값: true | 계산된 잠재력 맵을 퍼블리시 여부
+  orientation_mode: 3           # 기본값: 0 | 경로 포인트 orientation 설정 모드; 3=ForwardThenInterpolate
+  orientation_window_size: 1    # 기본값: 1 | orientation 계산 시 고려할 이웃 포인트 수
+  outline_map: true             # 기본값: true | 글로벌 costmap 외곽을 치명적 장애물로 표시 여부

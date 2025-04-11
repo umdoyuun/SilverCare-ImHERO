@@ -1,0 +1,24 @@
+#emergency-alert {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin: 20px;
+    color: #FF5858;
+    cursor: none;
+}
+
+#emergency-alert-content {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #FF5858;
+}
+
+.emergency-message {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #FF5858;
+    margin: 10px;
+}

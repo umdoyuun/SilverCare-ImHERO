@@ -1,0 +1,664 @@
+#notification-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+
+  width: 100%;
+  height: 100%;
+  min-width: 380px;
+
+  gap: 10px;
+
+  font-family: Pretendard;
+}
+
+#notification-main h2 {
+  height: 10%;
+}
+
+#notification-container {
+  display: flex;
+  justify-content: space-between; /* 요소 간 좌우 정렬 */
+  align-items: flex-start; /* 상하 정렬 */
+
+  width: 100%;
+  min-height: 90%;
+  max-height: 90%;
+
+  gap: 10px;
+}
+
+#all-notifications {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 100%;
+  height: 100%;
+
+  border-radius: 8px;
+  background-color: white;
+}
+
+#all-notifications-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  padding: 10px;
+
+  border-radius: 8px 8px 0px 0px;
+
+  background-color: #3e5c76;
+  color: white;
+}
+
+#all-notifications-header h3 {
+  margin: 4px;
+}
+
+#home-notifications {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  height: 100%;
+
+  padding: 10px;
+  gap: 8px;
+
+  border-radius: 8px;
+
+  overflow-y: scroll;
+  box-sizing: border-box;
+}
+
+/* Webkit 기반 브라우저에서 스크롤바 스타일 변경 */
+#home-notifications::-webkit-scrollbar {
+  width: 8px; /* 스크롤바의 너비 */
+}
+
+#home-notifications::-webkit-scrollbar-track {
+  background: #00000000; /* 스크롤바 배경 색상 */
+}
+
+#home-notifications::-webkit-scrollbar-thumb {
+  background: #a8a8a8; /* 스크롤바의 손잡이 색상 */
+  border-radius: 10px; /* 손잡이의 둥근 모서리 */
+}
+
+#home-notifications::-webkit-scrollbar-thumb:hover {
+  background: #777777; /* 손잡이를 hover 했을 때 색상 */
+}
+
+#home-notifications .notification-btn {
+  font-family: Pretendard;
+
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+}
+
+#home-notifications .home-notification {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+
+  border-radius: 8px;
+  padding: 10px;
+
+  width: 100%;
+
+  gap: 15px;
+
+  background-color: #d9d9d9;
+  color: black;
+}
+
+#home-notifications .home-notification-checked {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+
+  border-radius: 8px;
+  padding: 10px;
+
+  width: 100%;
+  gap: 15px;
+
+  background-color: #d9d9d9;
+  color: black;
+  filter: opacity(60%);
+}
+
+#home-notifications .home-notification-icon-1 {
+  background-color: #44803f;
+
+  width: 45px;
+  height: 45px;
+
+  border-radius: 100%;
+}
+
+#home-notifications .home-notification-icon-2 {
+  background-color: #ffec5c;
+
+  width: 45px;
+  height: 45px;
+
+  border-radius: 100%;
+}
+
+#home-notifications .home-notification-icon-3 {
+  background-color: #ff5a33;
+
+  height: 100%;
+  aspect-ratio: 1;
+
+  border-radius: 100%;
+}
+
+#home-notifications .home-notification-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+
+  width: 80%;
+  height: 100%;
+
+  gap: 7px;
+}
+
+#home-notifications .home-notification-content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+
+  width: 100%;
+  gap: 15px;
+}
+
+#home-notifications .home-notification-content-header h2 {
+  margin: 0;
+}
+p {
+  margin: 0 0 8px;
+  font-weight: bold;
+}
+
+#home-notifications .home-notification-description {
+  font-weight: bold;
+}
+
+#home-notifications .new-home-notification-description {
+  text-align: start;
+}
+
+#all-notifications .home-notification-btn {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+
+  margin: 5px;
+}
+
+#all-notifications .home-notification-btn button {
+  border: none;
+  border-radius: 5px;
+
+  padding: 5px 8px;
+
+  background-color: #3e5c76;
+
+  font-family: Pretendard;
+  font-weight: bold;
+  color: white;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#all-notifications .home-notification-btn button:hover {
+  background-color: #ff9500;
+
+  transition: all 0.3s ease;
+}
+
+#past-notifications-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  height: 50px;
+
+  margin-bottom: 10px;
+  padding: 10px;
+
+  border-radius: 8px 8px 0px 0px;
+}
+
+#past-notifications-title h2 {
+  margin: 0;
+}
+
+#past-notifications-title .period-report-control {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+
+  width: 60%;
+  gap: 10px;
+}
+
+#past-notifications-title .period-report-control input {
+  width: 120px;
+  height: 40px;
+
+  border: 0;
+  border-radius: 8px;
+
+  padding: 5px 8px;
+
+  background-color: #00000030;
+}
+
+#past-notifications-title .period-report-control button {
+  width: 120px;
+  height: 40px;
+
+  border: 0;
+  border-radius: 8px;
+
+  padding: 5px 8px;
+
+  font-family: Pretendard;
+  font-weight: bold;
+  background-color: #ff9500;
+  color: white;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#past-notifications {
+  width: 50vw;
+  height: 75vh;
+  max-height: 75vh;
+}
+
+#past-notifications #home-notifications {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+
+  padding: 8px;
+  border-radius: 10px;
+
+  width: 100%;
+  height: 90%;
+  max-height: 90%;
+  gap: 8px;
+
+  background-color: #00000046;
+
+  overflow-y: auto; /* 세로 스크롤 가능 */
+  box-sizing: border-box; /* 패딩 포함 크기 계산 */
+}
+
+#modal-notifications-actions {
+  position: sticky;
+  top: 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 12px;
+
+  width: 100%;
+}
+
+#modal-notifications-actions h3 {
+  margin: 0;
+}
+
+#modal-notifications-actions button {
+  padding: 5px;
+
+  border: none;
+  border-radius: 5px;
+
+  background-color: #ff5a33;
+  color: white;
+  font-weight: bold;
+  font-family: Pretendard;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#modal-notifications-actions button:hover {
+  filter: brightness(0.8);
+
+  transition: all 0.3s ease;
+}
+
+#modal-notifications {
+  width: 100%;
+  max-height: 100%; /* ✅ height 대신 max-height 사용 */
+  overflow-y: auto; /* 스크롤 가능 */
+}
+
+#modal-notifications #home-notifications {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+
+  width: 100%;
+  max-height: 90%; /* ✅ height 대신 max-height */
+  gap: 8px;
+
+  padding: 0;
+
+  overflow-y: auto; /* 세로 스크롤 가능 */
+  box-sizing: border-box;
+}
+
+#home-notifications .new-notification-btn {
+  justify-content: start;
+  display: flex;
+
+  width: 100%;
+  min-width: 280px;
+  height: 100%;
+
+  gap: 10px;
+
+  font-family: Pretendard;
+
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+}
+
+#public-emergency-notifications-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 100%;
+  height: 100%;
+
+  border-radius: 8px;
+
+  background-color: white;
+}
+
+#public-emergency-notifications-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  padding: 10px;
+
+  border-radius: 8px 8px 0px 0px;
+
+  background-color: #3e5c76;
+  color: white;
+}
+
+#public-emergency-notifications-header h3 {
+  margin: 4px;
+}
+
+#public-emergency-notifications {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  height: 100%;
+
+  padding: 10px;
+  gap: 8px;
+
+  border-radius: 8px;
+
+  overflow-y: auto; /* 세로 스크롤 가능 */
+  box-sizing: border-box; /* 패딩 포함 크기 계산 */
+}
+
+/* Webkit 기반 브라우저에서 스크롤바 스타일 변경 */
+#public-emergency-notifications::-webkit-scrollbar {
+  width: 8px; /* 스크롤바의 너비 */
+}
+
+#public-emergency-notifications::-webkit-scrollbar-track {
+  background: #00000000; /* 스크롤바 배경 색상 */
+}
+
+#public-emergency-notifications::-webkit-scrollbar-thumb {
+  background: #a8a8a8; /* 스크롤바의 손잡이 색상 */
+  border-radius: 10px; /* 손잡이의 둥근 모서리 */
+}
+
+#public-emergency-notifications::-webkit-scrollbar-thumb:hover {
+  background: #777777; /* 손잡이를 hover 했을 때 색상 */
+}
+
+#public-emergency-notifications .public-emergency-notification-click-btn {
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+
+  font-family: Pretendard;
+}
+
+#public-emergency-notifications .public-emergency-notification {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: start;
+  align-items: start;
+
+  border-radius: 8px;
+  padding: 10px;
+
+  width: 100%;
+  gap: 15px;
+
+  font-family: Pretendard;
+
+  background-color: #d9d9d9;
+  color: black;
+}
+
+#public-emergency-notifications .public-emergency-notification-checked {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: start;
+  align-items: start;
+
+  border-radius: 8px;
+  padding: 10px;
+
+  width: 100%;
+  gap: 15px;
+
+  font-family: Pretendard;
+
+  background-color: #d9d9d9;
+  color: black;
+  filter: opacity(60%);
+}
+
+#public-emergency-notifications .public-emergency-notification-notification {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: start;
+  align-items: start;
+
+  border-radius: 8px;
+  padding: 10px;
+
+  width: 100%;
+  gap: 15px;
+
+  font-family: Pretendard;
+
+  background-color: #d9d9d9;
+  color: black;
+}
+
+#public-emergency-notifications .public-emergency-notification-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+
+  width: 100%;
+  gap: 15px;
+}
+
+#public-emergency-notifications .public-emergency-notification-header h2 {
+  margin: 0;
+
+  color: #ff5a33;
+}
+
+#public-emergency-notifications .public-emergency-notification-header p {
+  margin: 0;
+
+  font-weight: bold;
+}
+
+#public-emergency-notifications .public-emergency-notification-content {
+  font-size: larger;
+  text-align: start;
+}
+
+#public-emergency-notifications .public-emergency-notification-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+
+  width: 100%;
+}
+
+#public-emergency-notifications
+  .public-emergency-notification-footer
+  .public-emergency-notification-loc {
+  margin: 0;
+}
+
+#public-emergency-notifications
+  .public-emergency-notification-footer
+  .public-emergency-notification-date {
+  margin: 0;
+
+  font-weight: normal;
+}
+
+#public-emergency-notifications-container .public-emergency-notification-btn {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+
+  margin: 5px;
+}
+
+#public-emergency-notifications-container
+  .public-emergency-notification-btn
+  button {
+  border: none;
+  border-radius: 5px;
+  background-color: #3e5c76;
+
+  font-family: Pretendard;
+  font-weight: bold;
+  color: white;
+
+  padding: 5px 8px;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#public-emergency-notifications-container
+  .public-emergency-notification-btn
+  button:hover {
+  background-color: #ff9500;
+
+  transition: all 0.3s ease;
+}
+
+#past-notifications #public-emergency-notifications {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+
+  padding: 8px;
+  border-radius: 10px;
+
+  width: 100%;
+  height: 90%;
+  max-height: 90%;
+  gap: 8px;
+
+  background-color: #00000046;
+
+  overflow-y: auto; /* 세로 스크롤 가능 */
+  box-sizing: border-box; /* 패딩 포함 크기 계산 */
+}
+
+@media screen and (max-width: 1200px) {
+  #notification-container {
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 10px;
+    gap: 10px;
+  }
+
+  #notification-elem-left {
+    width: 100%;
+  }
+
+  #notification-elem-right {
+    width: 100%;
+  }
+
+  #past-notifications {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  #home-notifications {
+    height: 50vh;
+  }
+
+  #public-emergency-notifications {
+    height: 50vh;
+  }
+
+  #emergency-alert {
+    height: 50vh;
+  }
+
+  #past-notifications-title {
+    flex-direction: column;
+    height: 100px;
+  }
+
+  #past-notifications-title .period-report-control {
+    width: 100%;
+  }
+}

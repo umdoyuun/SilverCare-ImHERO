@@ -1,0 +1,47 @@
+recovery_behaviors:
+  - name: 'conservative_reset'    
+    type: 'clear_costmap_recovery/ClearCostmapRecovery'
+  
+  - name: 'backoff_slow'           # 첫 번째 후진 시도 (천천히)
+    type: 'backoff_recovery/BackoffRecovery'
+  
+  - name: 'aggressive_reset'      
+    type: 'clear_costmap_recovery/ClearCostmapRecovery'
+
+  - name: 'backoff_fast'           # 두 번째 후진 시도 (빠르게)
+    type: 'backoff_recovery/BackoffRecovery'
+
+# recovery 세부 설정
+conservative_reset:
+  reset_distance: 5.0
+  layer_names: ["laser_scan"]
+  reset_on_oscillation: true       # 진동 감지 시 리셋 수행
+
+backoff_slow:                      # 첫 번째 후진 파라미터
+  backoff_distance: 0.2    
+  vel: 0.4
+  backoff_on_oscillation: true     # 진동 감지 시 후진 수행
+  oscillation_backoff_dist: 0.3    # 진동 시 후진 거리
+  min_travel_dist: 0.4             # 추가: 이전 Recovery 후 최소 이동 거리
+
+backoff_fast:                      # 두 번째 후진 파라미터
+  backoff_distance: 0.25    
+  vel: 0.4
+  backoff_on_oscillation: true
+  oscillation_backoff_dist: 0.4    # 더 긴 후진 거리
+  escalation_distance: 0.6         # 추가: 이전 Recovery와 같은 위치면 이 거리만큼 후진
+
+aggressive_reset:
+  reset_distance: 0.0            
+  layer_names: ["laser_scan"]
+  reset_on_oscillation: true
+
+# Recovery 진동 감지 파라미터 추가
+recovery_oscillation:
+  max_oscillation_attempts: 3      # 최대 Recovery 시도 횟수
+  min_recovery_interval: 5.0       # Recovery 시도 간 최소 간격 (초)
+  oscillation_distance: 0.8        # 진동 감지를 위한 이동 거리 임계값 (m)
+  oscillation_window: 5.0          # 진동 감지 시간 윈도우 (초)
+  net_distance_threshold: 0.3      # 실제 이동 거리 임계값 (m)
+  min_distance_between_recoveries: 0.5  # 추가: 이전 Recovery 위치와의 최소 거리
+  escalation_timeout: 10.0              # 추가: 같은 영역에서 Recovery 반복 시 다음 단계로 넘어가는 시간

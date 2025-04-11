@@ -1,0 +1,488 @@
+h5 {
+  text-align: center;
+}
+
+#side-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  height: 100%;
+  width: 70px;
+
+  padding: 50px 0px;
+
+  /* border-radius: 0px 10px 10px 0px; */
+
+  background-color: #1d2d44;
+
+  /* 기존 radial-gradient 제거 후 투명한 배경과 블러 효과 추가 */
+  /* background: linear-gradient(
+      55deg,
+      rgba(44, 44, 44, 0.19) 2.82%,
+      rgba(163, 163, 163, 0.2) 97.65%
+    ),
+    rgba(163, 163, 163, 0.2);  */
+  /* backdrop-filter: blur(30px);  */
+  /* -webkit-backdrop-filter: blur(30px); */
+
+  /* box-shadow: 4px 4px 6px 2px rgba(0, 0, 0, 0.25); */
+
+  overflow: hidden; /* 확장 전 텍스트 숨김 */
+
+  transition: all 0.3s ease;
+}
+
+#side-bar #logo-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 50px;
+
+  margin: 12px 0px;
+}
+
+#side-bar #logo-header img {
+  width: 50px;
+  height: 50px;
+}
+
+#side-bar #side-nav-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: Pretendard;
+
+  height: 50px;
+
+  margin: 12px 0px;
+}
+
+#side-bar #side-nav-header select {
+  appearance: none; /* 브라우저 기본 스타일 제거 */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  display: block;
+
+  width: 92%;
+  height: 100%;
+
+  border: 0;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.568);
+
+  text-align: center;
+  font-size: 14px;
+  font-family: Pretendard;
+  color: #142020;
+
+  cursor: pointer;
+}
+
+#side-bar:hover {
+  width: 200px;
+}
+
+.side-nav-li {
+  list-style: none;
+  margin: 0;
+}
+
+#side-bar:hover .side-nav-li {
+  list-style: none;
+  margin: 0;
+}
+
+.side-nav-elems {
+  padding-left: 6px;
+  margin: 0 0 10px 0;
+
+  cursor: pointer;
+}
+
+#side-bar:hover .side-nav-elems {
+  padding-left: 6px;
+}
+
+#side-bar .side-nav-elem {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+
+  font-family: Pretendard;
+
+  margin: 4px 0px;
+  padding: 4px 4px;
+
+  border: 0;
+  border-radius: 12px;
+  background: transparent;
+
+  cursor: pointer;
+}
+
+#side-bar:hover .side-nav-elem {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+
+  font-family: Pretendard;
+
+  width: 188px;
+  margin: 4px 0px;
+  padding: 4px 4px;
+
+  border: 0;
+  border-radius: 12px;
+  background: transparent;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#side-bar:hover .side-nav-elem:hover {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+
+  width: 188px;
+  margin: 4px 0px;
+  padding: 4px 4px;
+
+  border: 0;
+  border-radius: 12px;
+
+  /* 기존 radial-gradient 제거 후 투명한 배경과 블러 효과 추가 */
+  background: linear-gradient(
+      55deg,
+      rgba(44, 44, 44, 0.19) 2.82%,
+      rgba(163, 163, 163, 0.2) 97.65%
+    ),
+    rgba(163, 163, 163, 0.2);
+  backdrop-filter: blur(30px); /* 블러 효과 */
+  -webkit-backdrop-filter: blur(30px); /* Safari 지원 */
+  box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.25);
+
+  font-weight: bold;
+  font-family: Pretendard;
+}
+
+#side-bar .side-nav-elem-active {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+
+  margin: 4px 0px;
+  padding: 4px 4px;
+
+  border: 0;
+  border-radius: 12px;
+  background: #ff9500;
+  box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.25);
+
+  font-weight: bold;
+  font-family: Pretendard;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#side-bar:hover .side-nav-elem-active {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+
+  margin: 4px 0px;
+  padding: 4px 4px;
+  width: 188px;
+
+  border: 0;
+  border-radius: 12px;
+  background: #ff9500;
+  box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.25);
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#side-bar .side-nav-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 45px;
+  height: 45px;
+
+  transition: none; /* 아이콘에 애니메이션 없음 */
+  flex-shrink: 0; /* 사이드바 크기가 변해도 아이콘 크기 고정 */
+
+  cursor: pointer;
+}
+
+#side-bar:hover .side-nav-icon {
+  justify-content: center;
+  align-items: center;
+
+  width: 45px;
+  height: 45px;
+
+  transition: none;
+}
+
+#side-bar img {
+  width: 75%;
+
+  transition: none;
+  z-index: 123;
+}
+
+#side-bar .side-nav-text {
+  display: none;
+}
+
+#side-bar:hover .side-nav-text {
+  display: block;
+
+  margin-left: 10px;
+
+  font-family: Pretendard;
+  font-size: 17px;
+  color: white;
+}
+
+#mobile-bar .top-bar {
+  position: sticky;
+  top: 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 70px;
+  padding: 0 20px;
+
+  background-color: #1d2d44;
+
+  /* 기존 radial-gradient 제거 후 투명한 배경과 블러 효과 추가 */
+  /* background: linear-gradient(
+      55deg,
+      rgba(44, 44, 44, 0.19) 2.82%,
+      rgba(163, 163, 163, 0.2) 97.65%
+    ),
+    rgba(163, 163, 163, 0.2);
+  backdrop-filter: blur(30px);  */
+  -webkit-backdrop-filter: blur(30px); /* Safari 지원 */
+  color: white;
+}
+
+#mobile-bar .top-bar-toggle-menu button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  font-family: Pretendard;
+}
+
+#mobile-bar .top-bar-toggle-menu img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Sidebar Styles */
+#mobile-bar .top-side-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  height: 100%;
+  width: 300px;
+
+  background-color: #1d2d44;
+
+  /* 기존 radial-gradient 제거 후 투명한 배경과 블러 효과 추가 */
+  /* background: linear-gradient(
+      55deg,
+      rgba(44, 44, 44, 0.19) 2.82%,
+      rgba(163, 163, 163, 0.2) 97.65%
+    ),
+    rgba(163, 163, 163, 0.2);
+  backdrop-filter: blur(30px);  */
+  -webkit-backdrop-filter: blur(30px); /* Safari 지원 */
+
+  z-index: 1000;
+  overflow-y: auto;
+
+  transform: translateX(-100%);
+  transition: all 0.3s ease-in-out;
+}
+
+#mobile-bar .top-side-bar.open {
+  box-shadow: 4px 0px 50px 1000px rgba(0, 0, 0, 0.25);
+
+  transform: translateX(0);
+  transition: all 0.3s ease-;
+}
+
+#mobile-bar .top-side-bar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  height: 80px;
+
+  padding: 10px 20px;
+
+  background: rgba(198, 198, 198, 0.149);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30%);
+
+  color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#mobile-bar .top-side-bar-header .top-side-bar-header-elem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 75%;
+  height: 100%;
+}
+
+#mobile-bar .top-side-bar-header select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  display: block;
+
+  width: 100%;
+  height: 80%;
+
+  border: 0;
+  border-radius: 8px;
+  background-color: transparent;
+
+  color: white;
+  font-size: large;
+  font-family: Pretendard;
+
+  cursor: pointer;
+}
+
+#mobile-bar .top-side-bar-header button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0;
+  background: none;
+  border: none;
+  color: white;
+
+  font-family: Pretendard;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#mobile-bar .top-side-bar-header button img {
+  width: 80%;
+}
+
+#mobile-bar .top-side-bar-nav {
+  padding: 0;
+  margin: 20px 0;
+
+  list-style: none;
+}
+
+#mobile-bar .top-side-bar-nav-li {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+
+  height: 45px;
+
+  margin: 15px 0px;
+  padding: 0px 15px;
+  z-index: 2000;
+}
+
+#mobile-bar .top-side-bar-nav-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#mobile-bar .top-side-bar-nav-li button img {
+  height: 35px;
+}
+
+#mobile-bar .top-side-bar-nav-li button:active {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+
+  margin: 4px 0px;
+  padding: 10px;
+  width: 288px;
+
+  border: 0;
+  border-radius: 12px;
+
+  background: linear-gradient(
+      55deg,
+      rgba(44, 44, 44, 0.19) 2.82%,
+      rgba(227, 227, 227, 0.2) 97.65%
+    ),
+    rgba(255, 255, 255, 0.2);
+}
+
+#mobile-bar .top-side-bar-nav-elem {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+
+  width: 288px;
+  margin: 4px 0px;
+  padding: 10px;
+  gap: 10px;
+
+  border: 0;
+  border-radius: 12px;
+  background: transparent;
+
+  transition: all 0.3s;
+}
+
+#mobile-bar .top-side-bar-nav-elem-active {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  border: 0;
+
+  width: 288px;
+  margin: 4px 0px;
+  padding: 10px;
+  gap: 10px;
+
+  border-radius: 12px;
+  background: #ff9500;
+
+  font-weight: bold;
+}
+
+#mobile-bar .top-side-bar-nav-text {
+  padding-left: 3px;
+
+  font-family: Pretendard;
+  font-size: 18px;
+  color: white;
+}

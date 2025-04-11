@@ -1,0 +1,161 @@
+#toggle-group-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0px 0px 10px;
+  gap: 10px;
+
+  border-radius: 0px 0px 8px 8px;
+  background-color: #3e5c76;
+}
+
+#toggle-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between; /* 공간 균등 분배 */
+
+  width: 95%;
+  padding: 5px 10px;
+
+  gap: 2%;
+
+  border-radius: 8px;
+
+  background-color: white;
+}
+
+#status-toggle {
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  padding: 0px 10px;
+
+  min-width: 49%;
+  max-width: 49%;
+  height: 80px;
+
+  margin: 4px 0px;
+
+  border-radius: 8px;
+
+  background: #e8f0f8;
+}
+
+#status-toggle-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  /* gap: 2px; */
+
+  color: black;
+  text-align: end;
+}
+
+#status-toggle-box .good {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 60px;
+  height: 60px;
+  padding: 2px;
+
+  border-radius: 100%;
+
+  background-color: #44803f;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#status-toggle-box .good:hover {
+  padding: 0;
+
+  background-color: #4d9346;
+
+  transition: all 0.3s ease;
+}
+
+#status-toggle-box .bad {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 60px;
+  height: 60px;
+  padding: 2px;
+
+  border-radius: 100%;
+
+  background-color: #ff5a33;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#status-toggle-box .bad:hover {
+  padding: 0;
+
+  background-color: #da4f30;
+
+  transition: all 0.3s ease;
+}
+
+#status-toggle-box .toggle-info {
+  width: 58%;
+}
+
+#status-toggle-box .toggle-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 60px;
+  height: 60px;
+  padding: 2px;
+
+  border-radius: 100%;
+  border: 0;
+  background-color: transparent;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#status-toggle-box img {
+  width: 60%;
+}
+
+#status-toggle-box .toggle-name {
+  font-size: 16px;
+
+  margin: 0;
+}
+
+#status-toggle-box .bad-status {
+  margin: 0;
+
+  font-weight: bold;
+  color: #ff5a33;
+}
+
+#status-toggle-box .good-status {
+  margin: 0;
+
+  font-weight: bold;
+  color: #44803f;
+}
+
+hr {
+  width: 100%;
+  background-color: #d9d9d9ac;
+}

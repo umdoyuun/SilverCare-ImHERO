@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  image-provider:
+    build: .
+    container_name: image-provider
+    hostname: image-provider
+    restart: unless-stopped
+    cap_add:
+      - SYS_TIME
+    ports:
+      - "127.0.0.1:4185:8000"
+    volumes:
+      - /home/ubuntu/docker/image-provider:/app/Storage
+    env_file:
+      - .env

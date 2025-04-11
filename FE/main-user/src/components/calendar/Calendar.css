@@ -1,0 +1,251 @@
+#calendar {
+    display: flex;
+    flex-direction: column;
+  
+    min-width: 400px;
+    width: 700px;
+  
+    margin: 0 auto 10px auto;
+    cursor: none;
+    overflow: hidden;
+  }
+  
+  /* HEADER */
+  .calendar-header-container {
+    display: flex;
+    justify-content: space-between;
+
+    margin: 4px 0px;
+    margin-top: 0px;
+  }
+  
+  .calendar-header-change-button {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  
+    width: 40%;
+    gap: 20px;
+  
+    background-color: transparent;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 25.6px;
+  }
+  
+  .calendar-header-change-button button {
+    background-color: transparent;
+  
+    border: 0;
+    border-radius: 100%;
+  
+    aspect-ratio: 1; /* 너비와 높이를 동일하게 설정 */
+  
+    transition: all 0.1s ease-in-out;
+  }
+  
+  .calendar-header-change-button button:hover {
+    background-color: rgba(255, 255, 255, 0.568);
+  }
+  
+  .calendar-header-change-button img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    width: 15px;
+    height: 19px;
+  }
+  
+  /* BODY */
+  .calendar-container {
+    display: flex;
+    flex-direction: column;
+  
+    padding: 20px 10px;
+    gap: 15px;
+  
+    background: rgba(255, 255, 255, 0.568);
+  
+    border-radius: 20px;
+  }
+  
+  .calendar-day-wrapper {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(50px, 1fr));
+    grid-row-gap: 10px;
+  }
+  
+  .calendar-item {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .calendar-item.sunday {
+    color: red;
+  }
+  
+  .calendar-item.weekday {
+    color: #333;
+  }
+  
+  .calendar-day {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+  
+    padding: 3px;
+    aspect-ratio: 1.5; /* 너비와 높이를 동일하게 설정 */
+  
+    color: #000; /* Default day color for current month */
+    font-weight: bold;
+  
+    transition: all 0.3s ease;
+  }
+  
+  .calendar-day:hover {
+    border-radius: 10px;
+    background-color: rgba(82, 133, 177, 0.562);
+  
+    transition: all 0.3s ease;
+  }
+  
+  .calendar-day.sunday {
+    color: red;
+  }
+  
+  .calendar-day.not-current-month {
+    color: #aaa;
+  }
+  
+  .calendar-day.selected-date {
+    color: white;
+    background-color: #3e5c76;
+    border-radius: 12px;
+  
+    font-weight: bold;
+  
+    transition: all 0.3s ease;
+  }
+
+  .calendar-day.today {
+    background-color: #5285b1;
+    color: white;
+    border-radius: 12px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+
+  .calendar-day.selected-date.today {
+    background-color: #5285b1; /* 선택된 날짜가 오늘이라면 진한 초록색 유지 */
+  }
+  
+  .calendar-day-schedules {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  
+    gap: 3px;
+    margin: 0;
+    padding: 5px 0px;
+  
+    list-style: none;
+  
+    font-size: small;
+    font-weight: normal;
+    color: white;
+  }
+  
+  .calendar-day-schedule {
+    display: block; /* 블록 요소 설정 */
+  
+    margin: 0;
+    padding: 0 5px;
+    max-width: 100%; /* 부모 요소에 맞춤 */
+  
+    border-radius: 6px;
+    background-color: #0e0e0e7d;
+  
+    white-space: nowrap; /* 줄 바꿈 방지 */
+    overflow: hidden; /* 넘치는 글자 숨김 */
+    text-overflow: ellipsis; /* ...으로 표시 */
+  }
+  
+  .calender-schedule {
+    margin: 20px 10px 0px;
+  
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .calender-schedule-widget {
+    margin: 20px 10px 0px;
+  }
+  
+  .calender-schedule-date {
+    margin: 0px;
+    padding: 8px;
+  
+    background-color: #3e5c76;
+    border-radius: 10px;
+  
+    font-size: small;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .calender-schedule ul {
+    margin-bottom: 0;
+    padding: 0px;
+  
+    list-style: none;
+  
+    font-size: medium;
+  }
+  
+  .calender-schedule-widget ul {
+    margin-bottom: 0;
+    padding: 0px;
+  
+    list-style: none;
+  
+    font-size: medium;
+  }
+  
+  .calendar-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  
+    margin-top: 8px;
+  
+    width: 100%;
+  }
+  
+  .calendar-form input {
+    width: 90%;
+    height: 50px;
+    padding-left: 15px;
+  
+    background-color: rgba(255, 255, 255, 0.568);
+  
+    border: 0;
+    border-radius: 8px 0px 0px 8px;
+  }
+  
+  .calendar-form input:focus {
+    outline: 1px #3e5c76 solid;
+  }
+  
+  .calendar-form button {
+    width: 10%;
+    height: 50px;
+  
+    background-color: #3e5c76;
+  
+    border: 0;
+    border-radius: 0px 8px 8px 0px;
+  
+    font-size: x-large;
+  }  

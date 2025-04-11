@@ -1,0 +1,26 @@
+import "./Modal.css";
+
+import { useRef, useEffect } from "react";
+import { createPortal } from "react-dom";
+
+function Modal({ open, onClose, children }) {
+  const dialog = useRef();
+
+  useEffect(() => {
+    if (open) {
+      dialog.current.showModal();
+    } else {
+      dialog.current.close();
+    }
+  }, [open]);
+
+  return createPortal(
+    <dialog id="modal" ref={dialog} onClose={onClose}>
+      <button className="close-button" onClick={onClose}>✖</button>
+      {open ? children : null}
+    </dialog>,
+    document.getElementById("modal")
+  );
+}
+
+export default Modal;

@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<launch>
+    <!-- SLAM 실행 -->
+    <include file="$(find my_slam)/launch/my_slam.launch" />
+    
+    <!-- 모터 컨트롤러 실행 -->
+    <include file="$(find robot_motor_controller)/launch/motor_controller.launch" />
+
+    <!-- move_base 노드 -->
+    <node pkg="move_base" type="move_base" name="move_base" output="screen">
+        <!-- costmap/planner 설정 -->
+        <rosparam file="$(find my_slam)/config/move_base/costmap_common_params.yaml" command="load" ns="local_costmap" />
+        <rosparam file="$(find my_slam)/config/move_base/global_costmap_params.yaml" command="load" />
+        <rosparam file="$(find my_slam)/config/move_base/local_costmap_params.yaml" command="load" />
+        <rosparam file="$(find my_slam)/config/move_base/dwa_local_planner.yaml" command="load" />
+        <!-- <rosparam file="$(find my_slam)/config/move_base/global_planner_params.yaml" command="load" ns="global_planner" /> -->
+
+        <!-- Recovery Behaviors -->
+        <rosparam file="$(find my_slam)/config/move_base/recovery_params.yaml" command="load" />
+        <param name="recovery_behavior_enabled" value="true" />
+        <param name="clearing_rotation_allowed" value="false" />
+        
+        <!-- Move Base 파라미터 -->
+        <param name="controller_frequency" value="10.0" />
+        <param name="controller_patience" value="0.5" />    <!-- 유효한 제어 명령 대기 시간-->
+        <param name="shutdown_costmaps" value="false" />    
+        <param name="base_global_planner" value="hybrid_astar_planner/HybridAStarPlanner"/>
+        <!-- <param name="base_global_planner" value="navfn/NavfnROS"/> -->
+        <param name="base_local_planner" value="dwa_local_planner/DWAPlannerROS"/>
+        <!-- <param name="planner_frequency" value="0.01" />  global planner 주기 -->
+    </node>
+
+    <!-- 조이스틱 노드 -->
+    <node pkg="joy" type="joy_node" name="joy_node">
+        <param name="dev" value="/dev/input/js0"/>
+        <param name="deadzone" value="0.12"/>
+    </node>
+
+    <!-- 조이스틱-cmd_vel 변환 노드 -->
+    <node pkg="robot_motor_controller" 
+          type="joy_teleop.py" 
+          name="joy_teleop" 
+          output="screen">
+        <param name="axis_linear" value="1"/>  <!-- 왼쪽 스틱 상하 -->
+        <param name="axis_angular" value="3"/>  <!-- 오른쪽 스틱 좌우 -->
+        <param name="scale_linear" value="0.6"/>
+        <param name="scale_angular" value="1.0"/>
+        <param name="mode_button" value="0"/>  <!-- A 버튼 -->
+        <param name="stop_button" value="1"/>  <!-- B 버튼 -->
+        <param name="priority" value="true"/>  <!-- 게임패드 우선순위 -->
+    </node>
+
+    <!-- YOLO Pose 노드 -->
+    <include file="$(find yolo_pkg)/launch/zz.launch" />
+
+    <!-- 주행 모드 매니저 -->
+    <node pkg="my_slam" type="driving_mode_manager.py" name="driving_mode_manager" output="screen"/>
+    
+    <!-- 자율 탐색 노드 -->
+    <node pkg="my_slam" type="autonomous_exploration.py" name="autonomous_exploration" output="screen"/>
+    
+    <!-- 사람 추적 노드 -->
+    <node pkg="my_slam" type="person_following.py" name="person_follower" output="screen">
+        <param name="image_width" value="1280"/>
+        <param name="image_height" value="720"/>
+    </node>
+
+    <!-- 소켓 클라이언트 -->
+    <node pkg="my_slam" type="socket_client.py" name="socket_client" output="screen">
+        <param name="server_ip" value="70.12.247.214"/>
+        <param name="server_port" value="12345"/>
+    </node>
+
+    <!-- RViz 설정 -->
+    <node pkg="rviz" type="rviz" name="rviz" 
+          args="-d $(find my_slam)/rviz/nav.rviz"
+          respawn="true"
+          output="screen"/>
+
+</launch>

@@ -1,0 +1,159 @@
+#login-form {
+    position: absolute;
+    top: 15%;
+    left: 20%;
+    margin: 0 auto;
+    padding: 2rem;
+
+    width: 100%;
+    min-width: 450px;
+    max-width: 600px;
+
+    border-radius: 8px;
+    cursor: none;
+
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+/* 로그인 폼이 서서히 나타나는 효과 */
+#login-form.fade-in {
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    margin: 0 auto;
+    padding: 2rem;
+
+    width: 100%;
+    min-width: 450px;
+    max-width: 600px;
+
+    border-radius: 8px;
+    cursor: none;
+
+    opacity: 1;
+}
+
+#login-form .login-form-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 1rem;
+    cursor: none;
+}
+
+#login-form .login-control {
+    width: 100%;
+}
+
+#login-form .login-control input {
+    display: block;
+    cursor: none;
+
+    width: 100%;
+    height: 50px;
+    padding-left: 15px;
+
+    background-color: rgba(255, 255, 255, 0.568);
+
+    border: 0;
+    border-radius: 8px;
+}
+
+#login-form .login-control label {
+    display: block;
+    cursor: none;
+
+    margin-bottom: 0.2rem;
+
+    color: #1d2d44;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+#login-form .login-header {
+    display: flex;
+    justify-content: space-between;
+    justify-self: center;
+    align-items: center;
+
+    margin-bottom: 2rem;
+}
+
+#login-form .login-header h2 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+#login-form .login-header button {
+    width: 40px;
+    height: 40px;
+
+    border: 0;
+    border-radius: 12px;
+
+    background-color: transparent;
+    color: #ff5a33;
+
+    font-size: larger;
+    text-align: center;
+
+    transition: all 0.3s ease;
+    cursor: none;
+}
+
+#login-form .login-header button:hover {
+    background-color: #ff5a33;
+
+    color: white;
+
+    transition: all 0.3s ease;
+}
+
+#login-form .login-btn {
+    width: 100%;
+    height: 50px;
+
+    margin-top: 30px;
+    padding: 10px;
+
+    border: 0;
+    border-radius: 8px;
+
+    background-color: #3e5c76;
+
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+
+    cursor: none;
+    transition: all 0.3s ease;
+}
+
+#login-form .login-btn:hover {
+    filter: brightness(0.8);
+    /* outline: 2px solid rgba(255, 255, 255, 0.5); */
+    transition: all 0.3s ease-in-out;
+}
+
+/* 환영 문구 초기 위치 (화면 중앙) */
+.welcome-text {
+    position: absolute;
+    top: 50%;
+    left: 49%;
+    transform: translate(-50%, -50%);
+    font-size: 1.7rem;
+    margin: 5px;
+    color: #1d2d44;
+    text-align: center;
+    transition: all 1.2s ease-in-out;
+}
+
+/* 환영 문구가 위쪽으로 올라가는 상태 */
+.welcome-text.moved-up {
+    font-size: 1.7rem;
+    top: 10%;
+    transform: translateX(-50%);
+}

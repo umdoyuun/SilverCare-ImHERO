@@ -1,0 +1,523 @@
+#message-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+
+  width: 100%;
+  min-width: 380px;
+  height: 100%;
+
+  gap: 10px;
+
+  font-family: Pretendard;
+}
+
+#message-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  width: 100%;
+  min-height: 90%;
+  max-height: 90%;
+
+  background-color: #3e5c76;
+  border-radius: 8px;
+
+  padding: 10px;
+}
+
+#message-no-member-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 90%;
+
+  background-color: #3e5c76;
+  border-radius: 8px;
+
+  padding: 10px;
+}
+
+#message-header {
+  height: 10%;
+}
+
+#message-main h2 {
+  height: 10%;
+}
+
+#message-title {
+  color: #0d1321;
+  font-size: 48px;
+  margin: 0px 20px 10px;
+}
+
+#message-left {
+  width: 25%;
+  height: 100%;
+
+  margin: 10px auto;
+  padding: 10px;
+
+  border-radius: 12px;
+
+  background: linear-gradient(
+      55deg,
+      rgba(44, 44, 44, 0.19) 2.82%,
+      rgba(227, 227, 227, 0.2) 97.65%
+    ),
+    rgba(255, 255, 255, 0.2);
+
+  box-shadow: 4px 4px 6px 2px rgba(0, 0, 0, 0.25);
+}
+
+#message-right {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+
+  width: 75%;
+  height: 100%;
+
+  margin: 10px auto;
+  padding: 10px;
+
+  border-radius: 12px;
+
+  background: linear-gradient(
+      55deg,
+      rgba(44, 44, 44, 0.19) 2.82%,
+      rgba(227, 227, 227, 0.2) 97.65%
+    ),
+    rgba(255, 255, 255, 0.2);
+
+  box-shadow: 4px 4px 6px 2px rgba(0, 0, 0, 0.25);
+}
+
+.select-message-room {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+
+  width: 25%;
+  height: 100%;
+
+  margin-top: 20px;
+  padding: 10px 2px;
+  gap: 5px;
+
+  border: 0;
+
+  overflow-y: auto;
+}
+
+.select-message-room .unselected {
+  width: 100%;
+  height: 50px;
+
+  border: 0;
+  border-radius: 8px 0px 0px 8px;
+
+  font-size: 18px;
+  font-family: Pretendard;
+
+  background-color: #3e5c76;
+  color: white;
+
+  transition: all 0.3s ease;
+}
+
+.select-message-room .unselected:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+
+  font-weight: bold;
+
+  transition: all 0.3s ease;
+}
+
+.select-message-room .selected {
+  width: 100%;
+  height: 50px;
+
+  border: 0;
+  border-radius: 8px 0px 0px 8px;
+
+  font-size: 18px;
+  font-weight: bold;
+  font-family: Pretendard;
+
+  background-color: white;
+  color: #1d2d44;
+
+  transition: all 0.3s ease;
+}
+
+#message {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+
+  width: 75%;
+  height: 100%;
+
+  border-radius: 8px;
+
+  background-color: white;
+}
+
+#message h2 {
+  margin: 5px 10px 15px;
+}
+
+#message-chat {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  height: 90%;
+
+  padding: 10px;
+
+  border: 0;
+}
+
+#no-chat {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 90%;
+
+  color: #0d1321;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#chat {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+
+  width: 100%;
+  min-height: 100%;
+  height: 100%;
+  max-height: 100%;
+
+  padding: 15px;
+  gap: 18px;
+
+  border: 0;
+  border-radius: 8px;
+
+  overflow-y: auto; /* 세로 스크롤 가능 */
+  box-sizing: border-box;
+
+  background-color: #aabbcc;
+}
+
+/* Webkit 기반 브라우저에서 스크롤바 스타일 변경 */
+#chat::-webkit-scrollbar {
+  width: 8px; /* 스크롤바의 너비 */
+}
+
+#chat::-webkit-scrollbar-track {
+  background: #00000000; /* 스크롤바 배경 색상 */
+}
+
+#chat::-webkit-scrollbar-thumb {
+  background: #a8a8a8; /* 스크롤바의 손잡이 색상 */
+  border-radius: 10px; /* 손잡이의 둥근 모서리 */
+}
+
+#chat::-webkit-scrollbar-thumb:hover {
+  background: #777777; /* 손잡이를 hover 했을 때 색상 */
+}
+
+#chat .main {
+  display: flex;
+  justify-content: start;
+  align-items: end;
+}
+
+#chat .sub {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+}
+
+#chat .chat-date {
+  margin: 0px 10px;
+
+  font-size: small;
+}
+
+#chat .emergency-main-chat,
+#chat .main-chat,
+#chat .sub-chat {
+  padding: 8px;
+  border-radius: 10px;
+  color: black;
+  font-size: large;
+  opacity: 0; /* 초기 상태에서 메시지가 보이지 않도록 설정 */
+  animation: slideUp 0.5s ease-out forwards; /* 애니메이션 적용 */
+
+  word-wrap: break-word; /* 긴 단어도 자동 줄바꿈 */
+  word-break: break-word; /* 긴 단어도 강제 줄바꿈 */
+  overflow-wrap: break-word; /* 브라우저 호환성을 위해 추가 */
+}
+
+#chat .emergency-main-chat {
+  max-width: 300px;
+  background-color: #ff5a33;
+
+  color: white;
+  border-radius: 10px 10px 10px 0px;
+}
+
+#chat .main-chat {
+  max-width: 300px;
+  background-color: #1d2d44;
+
+  color: white;
+  border-radius: 10px 10px 10px 0px;
+}
+
+#chat .sub-chat {
+  max-width: 300px;
+
+  background-color: #f0ebd8;
+  border-radius: 10px 10px 0px 10px;
+}
+
+#chat img {
+  max-width: 280px;
+  max-height: 280px;
+
+  border-radius: 8px;
+  border: 0;
+}
+
+/* 애니메이션 정의 */
+@keyframes slideUp {
+  0% {
+    transform: translateY(20px); /* 처음에는 20px 아래에서 시작 */
+    opacity: 0; /* 처음에는 보이지 않도록 */
+  }
+  100% {
+    transform: translateY(0); /* 최종 위치는 원래 위치 */
+    opacity: 1; /* 끝날 때는 완전히 보이도록 */
+  }
+}
+
+#message-form-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 10%;
+
+  padding: 10px;
+}
+
+#message-form-group form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  width: 100%;
+  height: 100%;
+  gap: 10px;
+}
+
+#message-file-group {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100%;
+  aspect-ratio: 1;
+  gap: 10px;
+
+  border: 0;
+  border-radius: 8px;
+  background-color: #748cab;
+
+  cursor: pointer;
+  font-weight: bold;
+
+  transition: all 0.3s ease;
+}
+
+#message-file-group label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+}
+
+#message-file-group:hover {
+  background-color: #1d2d44;
+
+  transition: all 0.3s ease;
+}
+
+#image-preview {
+  position: absolute;
+}
+
+#image-preview img {
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+#message-input-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+}
+
+#message-input-group input {
+  width: 85%;
+  height: 100%;
+  padding-left: 15px;
+
+  background-color: #dddddd;
+
+  border: 0;
+  border-radius: 8px 0px 0px 8px;
+}
+
+#message-input-group input:active {
+  border: 1px solid red;
+}
+
+#message-input-group button {
+  width: 15%;
+  height: 100%;
+
+  background-color: #748cab;
+
+  border: 0;
+  border-radius: 0px 8px 8px 0px;
+
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: Pretendard;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#message-input-group button:hover {
+  background-color: #1d2d44;
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 720px) {
+  #message-title {
+    display: none;
+  }
+
+  #message-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    margin-top: 10px;
+    gap: 0px;
+  }
+
+  #message-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    margin: 0px;
+    padding: 0px;
+
+    background-color: white;
+  }
+
+  .select-message-room {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+
+    width: 100%;
+
+    margin: 0;
+    padding: 5px;
+
+    gap: 10px;
+
+    border-radius: 8px 8px 0px 0px;
+    background-color: #1d2d44;
+
+    overflow-y: unset;
+  }
+
+  .select-message-room .unselected {
+    width: 150px;
+    height: 50px;
+
+    border: 0;
+    border-radius: 8px;
+
+    background-color: transparent;
+
+    transition: all 0.3s ease;
+  }
+
+  .select-message-room .unselected:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+
+    font-weight: bold;
+
+    transition: all 0.3s ease;
+  }
+
+  .select-message-room .selected {
+    width: 150px;
+    height: 50px;
+
+    border: 0;
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    background-color: rgb(255, 255, 255);
+    transition: all 0.3s ease;
+  }
+
+  #message {
+    width: 100%;
+    height: 80vh;
+  }
+}

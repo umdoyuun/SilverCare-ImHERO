@@ -1,0 +1,62 @@
+#nav-bar {
+  background: #1d2d44;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  width: 10%;
+  display: flex; 
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s ease-in-out;
+  transform: translateX(0);
+  opacity: 1;
+  cursor: none;
+}
+ 
+#nav-bar p {
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+}
+
+#nav-bar #status-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#nav-bar #status-bar button {
+  background: transparent;
+  border: transparent 2px solid;
+  border-radius: 8px;
+  height: 40%;
+  padding: 8px;
+  margin: 4px;
+  margin-bottom: 1rem;
+  transition: all 0.2s ease-in-out;
+  cursor: none;
+}
+
+#nav-bar #status-bar button:hover {
+  border: 2px white solid;
+  transition: all 0.3s ease;
+}
+
+#nav-bar #status-bar .selected {
+  border: 2px white solid;
+}
+
+#nav-bar #status-bar img {
+  width: 40px;
+}
+
+#nav-bar #status-bar .no-border {
+  border: none !important;
+}
+
+@media screen and (max-width: 768px) {
+  #nav-bar {
+    width: 0;
+    transform: translateX(-100%); /* Slide to the left */
+    opacity: 0;
+    overflow: hidden;
+  }
+}

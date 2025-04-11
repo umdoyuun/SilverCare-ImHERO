@@ -1,0 +1,431 @@
+#activity-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+
+  width: 100%;
+  height: 100%;
+
+  gap: 10px;
+
+  font-family: Pretendard;
+}
+
+#activity-main h2 {
+  height: 10%;
+}
+
+#activity-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  width: 100%;
+  min-height: 90%;
+  max-height: 90%;
+
+  gap: 10px;
+}
+
+#activity-no-member-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 90%;
+
+  background-color: #3e5c76;
+  border-radius: 8px;
+
+  padding: 10px;
+}
+
+#activity-elem-left,
+#activity-elem-right {
+  flex: 1 1 auto;
+}
+
+#activity-elem-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+
+  width: 40%;
+  min-width: 300px;
+  height: 100%;
+
+  gap: 10px;
+}
+
+#activity-elem-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+
+  width: 60%;
+  min-width: 300px;
+  height: 100%;
+
+  gap: 10px;
+}
+
+#activity-elem-left h2 {
+  padding: 10px;
+}
+
+#activity-toggle-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  height: 80%;
+
+  padding: 10px;
+
+  border-radius: 8px;
+
+  background-color: #3e5c76;
+}
+
+#activity-toggle-container h2 {
+  width: 100%;
+
+  margin: 0;
+  padding-left: 10px;
+}
+
+#activity-chart-container {
+  width: 100%;
+  height: 80%;
+
+  border-radius: 8px;
+
+  background-color: #b4b4b4;
+}
+
+#activity-chart {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+
+  padding: 10px 0px 0px;
+
+  border-radius: 8px;
+
+  background-color: rgba(255, 255, 255, 0.719);
+}
+
+#activity-chart .custom-tooltip {
+  min-width: 150px;
+
+  padding: 10px;
+
+  background-color: rgba(226, 226, 226, 0.5);
+  box-shadow: 4px 4px 6px 2px rgba(0, 0, 0, 0.25);
+
+  border-radius: 10px;
+}
+
+#activity-chart .custom-tooltip h3 {
+  margin: 0;
+
+  color: rgb(77, 77, 77);
+}
+
+#activity-chart .custom-tooltip p {
+  margin: 0;
+
+  color: rgb(77, 77, 77);
+}
+
+#activity-chart .custom-tooltip .date {
+  margin-bottom: 5px;
+  font-size: larger;
+  font-weight: bold;
+}
+
+#activity-chart .custom-tooltip .health {
+  color: #44803f;
+  font-size: smaller;
+}
+
+#activity-chart .custom-tooltip .mental {
+  color: #ff5a33;
+  font-size: smaller;
+}
+
+#activity-chart .custom-tooltip .desc {
+  margin: 5px 0px 0px;
+
+  color: black;
+  font-size: smaller;
+}
+
+hr {
+  border: solid rgb(77, 77, 77) 1px;
+}
+
+#activity-toggle-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  height: 20%;
+
+  gap: 10px;
+}
+
+#active-activity-toggle {
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-width: 50%;
+  max-width: 150px;
+  height: 80px;
+  padding: 15px;
+
+  border: none;
+  border-radius: 8px;
+
+  font-family: "Pretendard-Variable";
+
+  background: white;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+#activity-toggle {
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-width: 48%;
+  max-width: 150px;
+  height: 80px;
+  padding: 15px;
+
+  border: none;
+  border-radius: 8px;
+
+  font-family: "Pretendard-Variable";
+
+  background: #d9d9d9ac;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+#activity-toggle:hover {
+  background: #d9d9d9;
+
+  transition: all 0.3s ease;
+}
+
+#activity-toggle-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  gap: 12px;
+
+  color: black;
+  text-align: end;
+}
+
+.toggle-activity {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 60px;
+  height: 60px;
+  padding: 2px;
+
+  border-radius: 100%;
+
+  background-color: #44803f;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.toggle-activity:hover {
+  padding: 0;
+
+  background-color: #4d9346;
+
+  transition: all 0.3s ease;
+}
+
+.toggle-mental {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 60px;
+  height: 60px;
+  padding: 2px;
+
+  border-radius: 100%;
+
+  background-color: #ff5a33;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.toggle-mental:hover {
+  padding: 0;
+
+  background-color: #da4f30;
+
+  transition: all 0.3s ease;
+}
+
+#activity-toggle-box img {
+  width: 70%;
+}
+
+#activity-toggle-box .toggle-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 50%;
+}
+
+#activity-toggle-box .toggle-name {
+  margin: 0 5px;
+}
+
+#activity-toggle-box .toggle-status-bad {
+  margin: 0 5px;
+
+  font-size: x-large;
+  font-weight: bold;
+  color: #ff5a33;
+}
+
+#activity-toggle-box .toggle-status-good {
+  margin: 0 5px;
+
+  font-size: x-large;
+  font-weight: bold;
+  color: #44803f;
+}
+
+#activiy-weekly-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+
+  width: 100%;
+  height: 40%;
+
+  padding: 10px;
+  gap: 10px;
+
+  border-radius: 8px;
+
+  background-color: #3e5c76;
+}
+
+#weekly-stats-container {
+  display: flex;
+  justify-content: space-between;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+
+  gap: 10px;
+}
+
+#weekly-chart-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+
+  width: 100%;
+  height: 100%;
+
+  border-radius: 8px;
+
+  background-color: #b4b4b4;
+}
+
+#weekly-chart-container h3 {
+  margin: 0;
+
+  height: 10%;
+}
+
+#summary-container {
+  width: 50%;
+  height: 100%;
+
+  padding: 10px;
+}
+
+#summary-container h2 {
+  margin: 0;
+
+  height: 20%;
+}
+
+#summary-container .summary-title {
+  color: #ffec5c;
+  margin: 0;
+}
+
+/* #summary-container .summary-content {
+} */
+
+@media screen and (max-width: 720px) {
+  #activity-container {
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+    margin-top: 10px;
+  }
+
+  #activity-no-member-container {
+    margin-top: 10px;
+  }
+
+  #activity-elem-left {
+    width: 100%;
+  }
+
+  #activity-elem-right {
+    width: 100%;
+  }
+
+  #activity-toggle-container {
+    height: 70vh;
+  }
+}

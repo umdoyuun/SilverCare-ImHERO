@@ -1,0 +1,190 @@
+#settings-main {
+  width: 80vw;
+  min-width: 380px;
+}
+
+#settings-container {
+  display: flex;
+  justify-content: space-between; /* 요소 간 좌우 정렬 */
+  align-items: flex-start; /* 상하 정렬 */
+  width: 100%;
+  gap: 10px;
+}
+
+#settings-elem-left,
+#settings-elem-right {
+  flex: 1 1 auto; /* 필요 시 크기 조정 가능 */
+}
+
+#settings-elem-left {
+  width: 50%; /* 고정 폭 */
+  min-width: 300px; /* 최소 폭 */
+}
+
+#settings-elem-right {
+  width: 50%; /* 고정 폭 */
+  min-width: 300px; /* 최소 폭 */
+}
+
+#settings-toggle-group {
+  display: flex;
+  justify-content: space-between;
+
+  width: 100%;
+  gap: 10px;
+}
+
+#settings-toggle {
+  box-sizing: border-box;
+
+  display: flex;
+
+  min-width: 48%;
+  max-width: 150px;
+  height: 80px;
+  padding: 15px;
+
+  border-radius: 10px;
+
+  background: #d9d9d9ac;
+}
+
+#settings-toggle-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  gap: 12px;
+
+  color: black;
+  text-align: end;
+}
+
+.toggle-settings {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 60px;
+  height: 60px;
+  padding: 2px;
+
+  border-radius: 100%;
+
+  background-color: #44803f;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.toggle-settings:hover {
+  padding: 0;
+
+  background-color: #4d9346;
+
+  transition: all 0.3s ease;
+}
+
+#settings-toggle-box img {
+  width: 70%;
+}
+
+#settings-toggle-box .toggle-name {
+  margin: 0 5px;
+}
+
+#settings-toggle-box .toggle-status-bad {
+  margin: 0 5px;
+
+  font-size: x-large;
+  font-weight: bold;
+  color: #ff5a33;
+}
+
+#settings-toggle-box .toggle-status-good {
+  margin: 0 5px;
+
+  font-size: x-large;
+  font-weight: bold;
+  color: #44803f;
+}
+
+#sensitive-data-group {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  gap: 10px;
+
+  color: black;
+}
+
+#sensitive-data {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+
+  padding: 12px;
+
+  background-color: #d9d9d9ac;
+  border-radius: 8px;
+}
+
+#sensitive-data h3 {
+  margin: 0 0 8px 0;
+}
+
+#sensitive-data-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  gap: 10px;
+}
+
+#sensitive-data-content p {
+  margin: 0;
+}
+
+#sensitive-data-content button {
+  width: 70px;
+  height: 40px;
+
+  border: 0;
+  border-radius: 8px;
+
+  background-color: #ff5a33;
+
+  font-weight: bold;
+  color: white;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+#sensitive-data-content button:hover {
+  background-color: #da4f30;
+
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 1200px) {
+  #settings-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #settings-elem-left {
+    width: 100%;
+  }
+
+  #settings-elem-right {
+    width: 100%;
+  }
+}

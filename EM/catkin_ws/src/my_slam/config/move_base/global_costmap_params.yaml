@@ -1,0 +1,26 @@
+# global_costmap_params.yaml
+
+global_costmap:
+  global_frame: "map"
+  robot_base_frame: "base_footprint"
+  update_frequency: 1.0
+  publish_frequency: 1.0
+  transform_tolerance: 0.5
+  
+  # SLAM 동적 맵 업데이트를 위한 설정
+  static_map: false
+  rolling_window: true
+  width: 30.0
+  height: 30.0
+  resolution: 0.1
+  
+  # 알 수 없는 영역 처리 설정
+  track_unknown_space: false       # unknown space를 free로 취급
+  lethal_cost_threshold: 100       # lethal로 판단하는 임계값 증가
+  unknown_cost_value: 1            # unknown을 free로 취급
+  
+  # 맵 업데이트 관련
+  origin_x: 0.0
+  origin_y: 0.0
+  always_send_full_costmap: true
+

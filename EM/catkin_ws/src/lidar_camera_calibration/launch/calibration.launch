@@ -1,0 +1,17 @@
+<launch>
+    <node pkg="lidar_camera_calibration" type="calibration_node.py" name="lidar_camera_calibrator" output="screen">
+        <!-- Transform 파라미터 -->
+        <param name="x_offset" value="0.0"/>
+        <param name="y_offset" value="0.0"/>
+        <param name="z_offset" value="0.0"/>
+        <param name="yaw" value="0.0"/>
+        
+        <!-- 카메라 파라미터 -->
+        <param name="image_width" value="640"/>
+        
+        <!-- 시각화 파라미터 -->
+        <param name="marker_size" value="0.05"/>
+        <param name="marker_color_r" value="1.0"/>
+        <param name="marker_color_a" value="1.0"/>
+    </node>
+</launch>

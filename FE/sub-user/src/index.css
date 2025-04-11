@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Caprasimo&family=Roboto+Slab:wght@400;700&display=swap");
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Pretendard Variable", Pretendard, -apple-system,
+    BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
+    "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  line-height: 1.5;
+  font-size: 16px;
+
+  color: #dddddd;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: #eeeeee;
+
+  /* background: radial-gradient(circle at 50% 100%, #c7cdd6, #dddddd),
+    url("bg-pattern-dark.png"); */
+  /* background-repeat: ; */
+  background-size: 100% 100%, 30% 30%, 100% 100%;
+  min-height: 100vh;
+  /* height: 100%; */
+
+  margin: 0;
+  padding: 0;
+}
+
+#side-nav {
+  /* 
+  사이드 바 뒤의 요소가 초과되는 문제: 
+  index.html에 side-nav id를 가진 div에 따로 렌더링 시킨 후
+  해당 div의 z-index를 9999로 설정
+  기존 방식은 네비게이션 바를 fixed로 설정하여 렌더링 시키는 방식이었는데, 
+  fixed는 z-index를 무시하므로 문제가 발생
+  렌더링 되는 부분을 분리하고, 해당 부분의 z-index를 설정 후 그 위에서 fixed로 요소를 배치해 문제 해결
+   */
+  z-index: 9999;
+}
+
+#new-noti-modal {
+  z-index: 9999;
+}
+
+#spinner {
+  z-index: 10000;
+}
+
+@media screen and (max-width: 720px) {
+  body {
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+
+    margin: 0; /* 기본 여백 제거 */
+    padding: 0; /* 기본 패딩 제거 */
+  }
+}

@@ -1,0 +1,98 @@
+/* 모달 애니메이션 */
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%); /* 모달이 화면 아래에서 시작 */
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0); /* 모달이 정상 위치로 올라옴 */
+    opacity: 1;
+  }
+}
+
+/* 모달 애니메이션 */
+@keyframes slideLeft {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0); /* 모달이 정상 위치로 올라옴 */
+    opacity: 1;
+  }
+}
+
+.modal {
+  min-width: 380px;
+  max-width: 70vw;
+  max-height: 90vh;
+
+  margin: auto;
+  padding: 20px;
+
+  border: 0;
+  border-radius: 8px;
+
+  background: linear-gradient(
+      55deg,
+      rgba(255, 255, 255, 0.19) 2.82%,
+      rgba(255, 255, 255, 0.308) 97.65%
+    ),
+    rgba(255, 255, 255, 0.505);
+
+  box-shadow: 4px 4px 6px 2px rgba(0, 0, 0, 0.25);
+
+  font-family: Pretendard;
+
+  animation: slideUp 0.2s ease-out;
+}
+
+.modal::backdrop {
+  background: rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(30px);
+}
+
+.modal::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal::-webkit-scrollbar-track {
+  background: #00000000;
+}
+
+.modal::-webkit-scrollbar-thumb {
+  background: #a8a8a8;
+  border-radius: 10px;
+}
+
+.modal::-webkit-scrollbar-thumb:hover {
+  background: #777777;
+}
+
+.noti-modal {
+  position: fixed;
+
+  bottom: 0px;
+  right: 0px;
+
+  margin-right: 10px;
+  margin-bottom: 10px;
+
+  border: 0;
+  border-radius: 12px;
+
+  max-width: 400px;
+  max-height: 70vh;
+
+  background: #3e5c76c5;
+  color: white;
+
+  box-shadow: 4px 4px 6px 2px rgba(0, 0, 0, 0.25);
+
+  animation: slideLeft 0.4s ease-out;
+  overflow-y: auto;
+}
+
+.noti-modal::-webkit-scrollbar {
+  width: 0px; /* 스크롤바의 너비 */
+}

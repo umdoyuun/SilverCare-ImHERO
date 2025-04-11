@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  dev-main:
+    build: .
+    container_name: dev-main
+    hostname: dev-main
+    restart: unless-stopped
+    cap_add:
+      - SYS_TIME
+    ports:
+      - "127.0.0.1:4580:3000"

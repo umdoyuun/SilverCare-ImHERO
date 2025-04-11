@@ -1,0 +1,20 @@
+version: "3.8"
+
+services:
+  dev-ai:
+    build: .
+    container_name: dev-ai
+    hostname: dev-ai
+    restart: unless-stopped
+    cap_add:
+      - SYS_TIME
+    ports:
+      - "127.0.0.1:4380:4380"
+    networks:
+      - api_shared_network
+    env_file:
+      - .env
+
+networks:
+  api_shared_network:
+    external: true

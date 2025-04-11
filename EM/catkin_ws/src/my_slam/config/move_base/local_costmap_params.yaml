@@ -1,0 +1,28 @@
+# local_costmap_params.yaml
+
+local_costmap:
+  global_frame: "map"             # odom 없으므로 map 사용
+  robot_base_frame: "base_footprint"
+  update_frequency: 5.0
+  publish_frequency: 5.0
+  width: 12.0
+  height: 12.0
+  resolution: 0.1
+  transform_tolerance: 0.5
+
+  # 중요: clearing 관련 파라미터 추가
+  track_unknown_space: true
+  unknown_cost_value: -1
+  clearing_rotation_allowed: true # true로 설정하면 로봇이 회전할 때도 클리어링을 수행
+
+  static_map: false
+  rolling_window: true            # 로봇을 중심으로 로컬 윈도우가 움직이는 방식
+  always_send_full_costmap: true # 전체 코스트맵 항상 publish
+
+  # 키키
+  robot_radius: 0.0
+
+plugins:
+  - {name: static_layer, type: "costmap_2d::StaticLayer"}
+  - {name: obstacle_layer, type: "costmap_2d::ObstacleLayer"}
+  - {name: inflation_layer, type: "costmap_2d::InflationLayer"}

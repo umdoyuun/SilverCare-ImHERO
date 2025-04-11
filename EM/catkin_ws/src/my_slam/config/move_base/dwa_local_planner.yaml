@@ -1,0 +1,50 @@
+DWAPlannerROS:
+  # === Robot Configuration Parameters ===
+  max_vel_trans: 0.9         # 기본값: 0.55 | 최대 선형 속도 (m/s)
+  min_vel_trans: 0.3         # 기본값: 0.1  | 최소 선형 속도 (m/s)
+  
+  max_vel_x: 0.70             # 기본값: 0.55 | 최대 x축 속도 (m/s)
+  min_vel_x: 0.42            # 기본값: 0.0  | 최소 x축 속도 (m/s, 전진만 고려)
+  max_vel_y: 0.0             # 기본값: 0.1  | 최대 y축 속도 (m/s, 차동구동 아님)
+  min_vel_y: 0.0             # 기본값: -0.1 | 최소 y축 속도 (m/s, 차동구동 아님)
+  
+  max_rot_theta: 1.0         # 기본값: 1.0  | 회전 시 최대 각속도 제한 (rad/s)
+  min_rot_theta: -1.0        # 기본값: -1.0 | 회전 시 최소 각속도 제한 (rad/s)
+  
+  max_vel_theta: 0.85         # 기본값: 1.0  | 최대 회전 속도 (rad/s)
+  min_vel_theta: 0.05         # 기본값: 0.05 | 최소 회전 속도 (rad/s)
+  
+  acc_lim_x: 3.5             # 기본값: 2.5  | x축 가속도 제한 (m/s²)
+  dec_lim_x: 3.5             # 기본값: 2.5  | x축 감속도 제한 (m/s²)
+  acc_lim_theta: 10.0        # 기본값: 3.2  | 회전 가속도 제한 (rad/s²)
+  dec_lim_theta: 10.0        # 기본값: 3.2  | 회전 감속도 제한 (rad/s²)
+  
+  acc_lim_y: 0.0             # 기본값: 2.5  | y축 가속도 제한 (m/s², 차동구동 아님)
+
+  # === Forward Simulation Parameters ===
+  sim_time: 2.0              # 기본값: 1.7  | 시뮬레이션 시간 (초)
+  vx_samples: 20             # 기본값: 3    | x축 속도 샘플 수
+  vy_samples: 0              # 기본값: 10   | y축 속도 샘플 수 (차동구동이면 0)
+  vtheta_samples: 40         # 기본값: 20   | 회전 속도 샘플 수
+
+  # === Goal Tolerance Parameters ===
+  xy_goal_tolerance: 0.5     # 기본값: 0.10 | 목표 도달 x,y 허용 오차 (m)
+  yaw_goal_tolerance: 0.5    # 기본값: 0.05 | 목표 도달 회전 허용 오차 (rad)
+  latch_xy_goal_tolerance: false  # 기본값: false | 목표 오차 래치 여부
+
+  # === Oscillation Prevention Parameters ===
+  oscillation_reset_dist: 0.2  # 기본값: 0.05 | Oscillation 리셋 최소 이동 거리 (m)
+  oscillation_timeout: 1.5     # 기본값: (예: 2.0) | Oscillation 타임아웃 (초)
+
+  # === Trajectory Scoring Parameters ===
+  path_distance_bias: 70.0     # 기본값: 32.0 | 경로 추종 가중치
+  goal_distance_bias: 25.0     # 기본값: 24.0 | 목표 도달 가중치
+  occdist_scale: 1.00           # 기본값: 0.01 or 1.0 | 장애물 회피 가중치
+  forward_point_distance: 0.325  # 기본값: 0.325| 추가 평가 포인트까지의 거리 (m)
+  stop_time_buffer: 0.2        # 기본값: 0.2  | 정지 전 버퍼 시간 (초)
+  scaling_speed: 0.5           # 기본값: 0.25 | 감속 시작 속도 (m/s) - 장애물 근접 시
+  max_scaling_factor: 0.8      # 기본값: 0.2  | 최대 footprint 스케일링 비율
+
+  # === Global Plan Parameters ===
+  prune_plan: true           # 기본값: true | 글로벌 플랜에서 지나간 포인트 제거 여부
+  holonomic_robot: false     # 기본값: false | 호로노믹 구동 여부 (차동구동 아님)

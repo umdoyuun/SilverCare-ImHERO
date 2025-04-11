@@ -1,0 +1,402 @@
+#home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+  width: 1024px;
+  height: 600px;
+  transition: width 0.3s ease-in-out;
+  cursor: none;
+}
+
+
+#icon-box {
+  display: flex;
+  height: 400px;
+  width: 877px;
+  justify-content: space-around;
+  align-items: center;
+  cursor: none;
+}
+
+#icon-box #icon, #info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  width: 30%;
+  height: 80%;
+  margin: 2rem;
+  padding: 2rem;
+  border-radius: 8px;
+  background: rgba(62, 92, 118, 0.65);
+  box-shadow: 0 0 5px rgba(62, 92, 118, 0.5);
+  cursor: none;
+}
+
+#icon-box #icon img {
+  width: 70%;
+  margin-top: 2rem;
+  cursor: none;
+}
+
+#icon-box #icon button {
+  background: transparent;
+  border: none;
+  padding: 0;
+  transition: all 0.2s ease-in-out;
+  cursor: none;
+}
+
+#icon-box #icon:hover {
+  filter: brightness(75%);
+  transition: all 0.3s ease;
+}
+
+#icon-box #icon .icon-name {
+  font-weight: bold;
+  font-size: xx-large;
+  color: white;
+  margin-top: 3rem;
+  cursor: none;
+}
+
+#info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+  padding: 1rem;
+  gap: 1rem;
+  cursor: none;
+}
+
+#info-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 100%;
+  height: 50%;
+  gap: 19px;
+}
+
+#info-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #3e5c76;
+}
+
+
+#weather, #schedule {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  width: 50%;
+  padding: 0.8rem;
+  padding-left: 1rem;
+  background: #ffffff50;
+  border-radius: 8px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+#weather-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #3e5c76;
+  align-self: flex-start;
+}
+
+#weather-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  font-size: 1rem;
+}
+
+#weather-info img {
+  width: 40%;
+}
+
+#weather-detail {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #3e5c76;
+}
+
+#schedule-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #3e5c76;
+  align-self: flex-start;
+}
+
+#schedule-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* flex-grow: 1; */
+  align-items: center;
+  width: 100%;
+}
+
+.widget-schedule {
+  margin: 20px 0px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.widget-schedule ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.widget-schedule li {
+  margin-top: 5px;
+  width: 100%;
+  text-align: center; /* 텍스트 중앙 정렬 */
+}
+
+.widget-schedule-date {
+  margin: 0px;
+  padding: 15px;
+
+  background-color: #3e5c76;
+  border-radius: 10px;
+
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+#environment {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50%;
+  max-width: 100%;
+
+  background: #ffffff50;
+  border-radius: 8px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+#environment-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  font-size: 1rem;
+}
+
+#environment-info img {
+  width: 50%;
+  height: 40px;
+  margin-top: 5px;
+}
+
+#environment-info #info-title {
+  font-size: 1.2rem;
+}
+
+#environment-info #info-status {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #3e5c76;
+}
+
+#dock {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 877px;
+  height: 25%;
+  padding: 1rem;
+  gap: 1rem;
+  position: relative;
+  cursor: none;
+}
+
+#dock #dock-icon {
+  --w: 10em;
+  --bg: rgb(var(--rgb));
+  --bga: rgba(var(--rgb), 0.4);
+
+  width: var(--w);
+  height: var(--w);
+  background: var(--bg);
+  box-shadow: 0 3px 12px 2px var(--bga);
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  transition: 0.1s transform, 0.3s box-shadow;
+  will-change: transform, box-shadow;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Dock 버튼 비활성화 상태 */
+#dock #dock-icon.disable {
+  background: transparent !important;
+  box-shadow: none !important;
+  opacity: 0.5;
+  transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  cursor: none;
+}
+
+#dock #dock-icon img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+  cursor: none;
+}
+
+#dock #dock-icon .enable-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+}
+
+#dock #dock-icon .disable-img {
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  filter: grayscale(100%) brightness(60%);
+  transition: opacity 0.3s ease-in-out, filter 0.3s ease-in-out;
+  border-radius: 100%;
+}
+
+#dock #dock-icon button {
+  border: none;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.2);
+  transition: all 0.2s ease-in-out;
+}
+
+/* 클릭 시 색상 변화 효과 */
+#dock #dock-icon:after {
+  --bg: rgb(var(--rgb));
+  content: '';
+  position: absolute;
+  top: -15%;
+  left: -15%;
+  width: 200%;
+  height: 200%;
+  background: var(--bg);
+  border-radius: inherit;
+  transform: translate(5%, 5%) scale(0.03);
+  pointer-events: none;
+}
+
+/* 클릭 애니메이션 */
+#dock #dock-icon.animating:after {
+  animation: clickEffect 0.5s cubic-bezier(0.5, 0, 0.5, 1) backwards;
+}
+
+/* Dock 버튼만 색상 변경 */
+#dock #dock-icon.active {
+  background: rgb(var(--rgb));
+  transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+#dock #dock-icon:not(.active):after {
+  --rgb: 255, 255, 255;
+}
+
+#dock #dock-icon:not(.active) {
+  --rgb: none;
+  box-shadow: 0 2.5px 2.5px 2.5px rgba(62, 92, 118, 0.2);
+}
+
+#dock #dock-icon.active:after {
+  --rgb: 255, 255, 255;
+}
+
+/* 클릭 애니메이션 효과 */
+@keyframes clickEffect {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.99);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* 마우스 오버 시 확대 효과 */
+#dock #dock-icon:hover {
+  transform: scale(1.02);
+}
+
+/* Dock 버튼만 클릭 효과 */
+#dock #dock-icon.clicked {
+  animation: clickEffect 1s cubic-bezier(0.5, 0, 0.5, 1);
+}
+
+/* Dock 버튼 내부 SVG 애니메이션 */
+#dock #dock-icon svg {
+  --dash: 190;
+  stroke-linecap: round;
+  stroke-dasharray: var(--dash);
+  stroke-dashoffset: var(--dash);
+  width: 46px;
+  height: 46px;
+  transform: scaleX(-1) rotate(-89deg);
+  transition: 0.4s var(--timing);
+  margin: auto;
+  position: relative;
+  z-index: 1;
+  will-change: transform, stroke-dashoffset;
+}
+
+/* Dock 비활성화 시 애니메이션 */
+#dock #dock-icon:not(.active) svg {
+  stroke-dashoffset: 40;
+  transform: scaleX(-0.5) rotate(-52deg);
+  transition: 0.5s 0.25s;
+}
+
+@media screen and (max-width: 768px) {
+  #info {
+    max-width: 90%;
+    padding: 0.5rem;
+  }
+
+  #weather, #environment {
+    padding: 0.8rem;
+  }
+
+  #dock {
+    padding: 0 1rem;
+    gap: 1rem;
+  }
+}
