@@ -12,12 +12,12 @@ Carebot Project는 독거노인을 위한 스마트 생활 도우미 서비스�
 
 ### 프로젝트 기여자
 
-<a href="https://github.com/ehgud937"><img src="![1](https://github.com/user-attachments/assets/b0da6784-5d88-496a-b1fe-5a630ba0b1c0)" width="110" height="200" alt="Contributor 1"/></a>
-<a href="https://github.com/knowgyu"><img src="![2](https://github.com/user-attachments/assets/9075832d-85f8-414a-af61-020bf08c6000)" width="100" height="200" alt="Contributor 2"/></a>
-<a href="https://github.com/itdice"><img src="![최종3](https://github.com/user-attachments/assets/32d2acb7-9dd9-408a-920f-c1f69495cae3)" width="100" height="200" alt="Contributor 3"/></a>
-<a href="https://github.com/umdoyuun"><img src="![최종4](https://github.com/user-attachments/assets/b1a63c82-2c23-4b9d-891a-e12ff0bc8a8f)" width="100" height="200" alt="Contributor 4"/></a>
-<a href="https://github.com/SJLee-0525"><img src="![최종5](https://github.com/user-attachments/assets/29d17d5c-850d-4f89-8018-a71a5c5f8184)" width="100" height="200" alt="Contributor 5"/></a>
-<a href="https://github.com/Seohui-Hyung"><img src="![최종6](https://github.com/user-attachments/assets/9132aea9-04ac-46f9-8d4a-a67e3f7285db)" width="110" height="200" alt="Contributor 6"/></a>
+<a href="https://github.com/ehgud937"><img src="https://github.com/user-attachments/assets/b0da6784-5d88-496a-b1fe-5a630ba0b1c0" width="110" height="200" alt="Contributor 1"/></a>
+<a href="https://github.com/knowgyu"><img src="https://github.com/user-attachments/assets/9075832d-85f8-414a-af61-020bf08c6000" width="100" height="200" alt="Contributor 2"/></a>
+<a href="https://github.com/itdice"><img src="https://github.com/user-attachments/assets/32d2acb7-9dd9-408a-920f-c1f69495cae3" width="100" height="200" alt="Contributor 3"/></a>
+<a href="https://github.com/umdoyuun"><img src="https://github.com/user-attachments/assets/b1a63c82-2c23-4b9d-891a-e12ff0bc8a8f" width="100" height="200" alt="Contributor 4"/></a>
+<a href="https://github.com/SJLee-0525"><img src="https://github.com/user-attachments/assets/29d17d5c-850d-4f89-8018-a71a5c5f8184" width="100" height="200" alt="Contributor 5"/></a>
+<a href="https://github.com/Seohui-Hyung"><img src="https://github.com/user-attachments/assets/9132aea9-04ac-46f9-8d4a-a67e3f7285db" width="110" height="200" alt="Contributor 6"/></a>
 
 ### 최종 산출물
 
